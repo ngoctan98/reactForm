@@ -5,7 +5,7 @@ import Checkbox from '@mui/material/Checkbox';
 import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
 import NativeSelect from '@mui/material/NativeSelect';
-import { set } from './main';
+import { set } from '../Form/Form';
 import { useContext } from 'react';
 
 export default function  Trip() {

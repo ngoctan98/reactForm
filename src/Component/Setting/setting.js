@@ -1,14 +1,14 @@
-import Clustering from "./clustering";
-import Split from "./split";
-import VehiclePriority from "./vehiclePriority";
-import Trip from "./trip";
+import Clustering from "./Clustering";
+import Split from "./Split";
+import VehiclePriority from "./VehiclePriority";
+import Trip from "./Trip";
 
 function  Setting() {
 
     return(
 
     <div >
-        <div  style={{ margin:"24px 0px 0 24px",height:"100%"}}>
+        <div className="setting" >
 
             <div style={{ display: "flex" }}>
                 <div style={{ width: "166px" }}>

@@ -2,11 +2,11 @@ import * as React from 'react';
 import { createContext, useState } from 'react';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
-import LapTap from './tab';
+import LapTap from '../Tab/LapTap';
 
 export const set=createContext()
 
-function Main() {
+function Form() {
 
     const [checkRadioCluster, setCheckRadioCluster] = useState(false)
     const [checkBoxCluster, setCheckBoxCluster] = useState(false)
@@ -106,4 +106,4 @@ function Main() {
     )
     
 }
-export default Main;
+export default Form;

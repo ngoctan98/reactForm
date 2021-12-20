@@ -1,39 +1,13 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
 import NativeSelect from '@mui/material/NativeSelect';
+import { Acsending, Weight } from '../Constants/Constants';
 
 
 export default function VehiclePriority() {
 
-    const Acsending = [
-        {
-            id: 1,
-            value:'Acsending' },
-        {
-            id: 2,
-            value: ' Ten'
-        },
-        {
-            id: 3,
-            value: 'Twenty'
-        }
-    ]
-
-    const Weight = [
-        {
-            id: 1,
-            value:'Weight' },
-        {
-            id: 2,
-            value: ' Ten'
-        },
-        {
-            id: 3,
-            value: 'Twenty'
-        }
-    ]
+   
 
     return(
 
@@ -42,7 +16,6 @@ export default function VehiclePriority() {
             <FormControl style={{ width: "20%" , fontSize:"14px", marginLeft:"8px", marginRight:"8px"} }>
                 <InputLabel variant="standard"
                 >
-                    
                 </InputLabel>
                 <NativeSelect
                     defaultValue={1}
@@ -52,7 +25,10 @@ export default function VehiclePriority() {
                                 }}
                 >
                     {Acsending.map((item,index) =>
-                        <option key={index} value={item.id}>{item.value}</option>
+                        <option key={index} 
+                            value={item.id}>
+                            {item.value}
+                        </option>
                     )}
                    
                 </NativeSelect>
@@ -71,7 +47,10 @@ export default function VehiclePriority() {
                                 }}
                 >
                    {Weight.map((item,index) =>
-                        <option key={index} value={item.id}>{item.value}</option>
+                        <option key={index} 
+                            value={item.id}>
+                            {item.value}
+                        </option>
                     )}
                 </NativeSelect>
             </FormControl>

@@ -1,8 +1,8 @@
-import BranchConfig from "./branchconfig";
+import BranchConfig from "../BranchConfig/BranchConfig";
 function Configuration(params) {
     
     return(
-        <div style={{width:"904px" , height:"100%", margin:"-24px -24px 0 -24px",padding:"0 0 0 0"}}>
+        <div className="branch" >
             <BranchConfig></BranchConfig>
         </div>
     )

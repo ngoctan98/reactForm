@@ -42,6 +42,20 @@
   box-sizing:content-box;
   
 }
+
+.branch{
+  width: 904px;
+  height: 100%;
+  margin: -24px -24px 0 -24px;
+}
+
+.tab{
+  height: 532px;
+  overflow: scroll;
+  width: 100%;
+  margin-right: -16px;
+}
+
 .footer{
   position:absolute;
   bottom: 0px;
@@ -51,11 +65,18 @@
   background-color: rgba(247, 249, 250, 1);
 }
 
+.setting{
+  margin: 24px 0 0 24px;
+  height: 100%;
+}
+
 .headingRadio{
   font-size: 16px;
   color: rgba(145, 150, 153, 1);
   font-weight: 400;
   line-height: 24px;
+  float: left;
+  margin-top: 6px;
 }
 
 .App-logo {

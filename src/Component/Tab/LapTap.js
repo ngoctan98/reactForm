@@ -4,9 +4,8 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import { textAlign } from '@mui/system';
-import MainInfor from './mainInfor';
-import Configuration from './configuration';
+import MainInfor from '../MainInformation/MainInformation';
+import Configuration from '../Congiguration/Configuration';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -27,6 +26,7 @@ function TabPanel(props) {
     </div>
   );
 }
+
 
 TabPanel.propTypes = {
   children: PropTypes.node,

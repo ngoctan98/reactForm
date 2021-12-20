@@ -1,12 +1,10 @@
-
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import Setting from './setting';
-import { textAlign } from '@mui/system';
+import Setting from '../Setting/setting';
 
 
 function TabPanel(props) {
@@ -53,7 +51,11 @@ function BranchConfig() {
         <div className="div">
           
         <Box
-                sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex' ,height:"100%",width:"100%"}  } 
+                sx={{ flexGrow: 1, 
+                  bgcolor: 'background.paper', 
+                  display: 'flex' ,
+                  height:"100%",
+                  width:"100%"}  } 
         >
       
       <Tabs
@@ -65,7 +67,7 @@ function BranchConfig() {
         aria-label="Vertical tabs example"
         sx={{ borderRight: 1, borderColor: 'divider',minWidth:"200px"  }} 
       >
-        <Tab label="Branch Config" {...a11yProps(0)} style={{textTransform:"none",textAlign:"left",alignItems:"flex-start"}}  />
+        <Tab label="Branch Config" {...a11yProps(0)} style={{textTransform:"none",alignItems:"flex-start"}}  />
         <Tab label="Systems" {...a11yProps(1)} style={{textTransform:"none",alignItems:"flex-start" }} />
         <Tab label="Display" {...a11yProps(2)} style={{textTransform:"none",alignItems:"flex-start"}} />
         <Tab label="Mobile" {...a11yProps(3)} style={{textTransform:"none",alignItems:"flex-start"}} />
@@ -77,7 +79,7 @@ function BranchConfig() {
         <Tab label="Algorithms" {...a11yProps(9)}style={{textTransform:"none",alignItems:"flex-start"}} />
         <Tab label="Reasons Unfulfilled" {...a11yProps(10)}style={{textTransform:"none",alignItems:"flex-start"}} />
       </Tabs>
-      <div style={{height:"532px",overflowY:"scroll",width:"100%", marginRight:"-16px" }}>
+      <div className="tab" >
         <TabPanel value={value} index={0} style={{margin:"-24px -14px 0 -24px"  }}>
         <Setting ></Setting>
         </TabPanel>
