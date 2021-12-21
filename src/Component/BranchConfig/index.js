@@ -4,7 +4,8 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import Setting from '../Setting/setting';
+import Setting from '../Setting';
+import { useStyle } from './style';
 
 
 function TabPanel(props) {
@@ -43,44 +44,38 @@ function a11yProps(index) {
 function BranchConfig() {
 
     const [value, setValue] = React.useState(0);
+    const classes= useStyle()
+    console.log(classes)
 
     const handleChange = (event, newValue) => {
     setValue(newValue);
         };
     return(
-        <div className="div">
+      <div className="div">
           
-        <Box
-                sx={{ flexGrow: 1, 
-                  bgcolor: 'background.paper', 
-                  display: 'flex' ,
-                  height:"100%",
-                  width:"100%"}  } 
-        >
-      
+      <Box className={classes.box}>
       <Tabs
-        className="headingTab"
         orientation="vertical"
         variant="scrollable"
         value={value}
         onChange={handleChange}
         aria-label="Vertical tabs example"
-        sx={{ borderRight: 1, borderColor: 'divider',minWidth:"200px"  }} 
+        sx={{ borderRight: 1, borderColor: 'divider',minWidth:"200px"}} 
       >
-        <Tab label="Branch Config" {...a11yProps(0)} style={{textTransform:"none",alignItems:"flex-start"}}  />
-        <Tab label="Systems" {...a11yProps(1)} style={{textTransform:"none",alignItems:"flex-start" }} />
-        <Tab label="Display" {...a11yProps(2)} style={{textTransform:"none",alignItems:"flex-start"}} />
-        <Tab label="Mobile" {...a11yProps(3)} style={{textTransform:"none",alignItems:"flex-start"}} />
-        <Tab label="Holidays" {...a11yProps(4)} style={{textTransform:"none",alignItems:"flex-start"}} />
-        <Tab label="Item Order Creation" {...a11yProps(5)} style={{textTransform:"none",alignItems:"flex-start"}} />
-        <Tab label="Discount" {...a11yProps(6)} style={{textTransform:"none",alignItems:"flex-start"}} />
-        <Tab label="Un(loading) Time" {...a11yProps(7)} style={{textTransform:"none",alignItems:"flex-start"}} />
-        <Tab label="3D Loading" {...a11yProps(8)} style={{textTransform:"none",alignItems:"flex-start"}} />
-        <Tab label="Algorithms" {...a11yProps(9)}style={{textTransform:"none",alignItems:"flex-start"}} />
-        <Tab label="Reasons Unfulfilled" {...a11yProps(10)}style={{textTransform:"none",alignItems:"flex-start"}} />
+        <Tab label="Branch Config" {...a11yProps(0)}  className={classes.tab}  />
+        <Tab label="Systems" {...a11yProps(1)} className={classes.tab} />
+        <Tab label="Display" {...a11yProps(2)} className={classes.tab} />
+        <Tab label="Mobile" {...a11yProps(3)} className={classes.tab} />
+        <Tab label="Holidays" {...a11yProps(4)} className={classes.tab} />
+        <Tab label="Item Order Creation" {...a11yProps(5)} className={classes.tab} />
+        <Tab label="Discount" {...a11yProps(6)} className={classes.tab} />
+        <Tab label="Un(loading) Time" {...a11yProps(7)} className={classes.tab} />
+        <Tab label="3D Loading" {...a11yProps(8)} className={classes.tab} />
+        <Tab label="Algorithms" {...a11yProps(9)}className={classes.tab} />
+        <Tab label="Reasons Unfulfilled" {...a11yProps(10)}className={classes.tab} />
       </Tabs>
       <div className="tab" >
-        <TabPanel value={value} index={0} style={{margin:"-24px -14px 0 -24px"  }}>
+        <TabPanel value={value} index={0} className={classes.tabPanel}>
         <Setting ></Setting>
         </TabPanel>
         <TabPanel value={value} index={1}>

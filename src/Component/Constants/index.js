@@ -1,5 +1,5 @@
-export const cluster = ['Auto', 'By Province', 'By Distric', 'By Town', 'By Drawing','Use Partner' ]
-export const Acsending = [
+export const CLUSTER = ['Auto', 'By Province', 'By Distric', 'By Town', 'By Drawing','Use Partner' ]
+export const ACSENDING = [
         {
             id: 1,
             value:'Acsending' },
@@ -13,7 +13,7 @@ export const Acsending = [
         }
     ]
 
- export   const Weight = [
+ export const WEIGHT = [
         {
             id: 1,
             value:'Weight' },

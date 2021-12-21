@@ -1,4 +1,4 @@
-import BranchConfig from "../BranchConfig/BranchConfig";
+import BranchConfig from "../BranchConfig";
 function Configuration(params) {
     
     return(

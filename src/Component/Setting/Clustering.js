@@ -6,12 +6,14 @@ import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormLabel from '@mui/material/FormLabel';
 import TextField from '@mui/material/TextField'
-import { cluster } from '../Constants/Constants';
-import { set } from '../Form/Form';
+import { CLUSTER } from '../Constants';
+import { set } from '../Form';
+import { useStyle } from './style';
 
 
 function Clustering() {
     const setCheck=React.useContext(set)
+    const classes= useStyle()
     
  
 
@@ -24,13 +26,13 @@ function Clustering() {
                 label="Use Clustering" />
             </FormGroup>
 
-            <FormLabel component="legend" style={{ textAlign: "left" }}>Cluster:</FormLabel>
+            <FormLabel component="legend"  className={classes.clusteringForm}>Cluster:</FormLabel>
                 <RadioGroup
                     aria-label="gender"
                     name="radio-buttons-group"
                     onChange={ e => setCheck.radioCluster(e)}
                 >
-                    {cluster.map((item,index) => 
+                    {CLUSTER.map((item,index) => 
                         <FormControlLabel key={index}
                          disabled={!setCheck.disabledRadio}
                         value={item}
@@ -40,7 +42,7 @@ function Clustering() {
                     )}
                 </RadioGroup>
                  <TextField
-                 style={{ width: "100%" }}
+                    className={classes.clusterText}
                     required
                     id="filled-required"
                     label="label"

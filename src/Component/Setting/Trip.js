@@ -5,20 +5,21 @@ import Checkbox from '@mui/material/Checkbox';
 import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
 import NativeSelect from '@mui/material/NativeSelect';
-import { set } from '../Form/Form';
+import { set } from '../Form';
 import { useContext } from 'react';
+import { useStyle } from './style';
 
 export default function  Trip() {
     const setCheck = useContext(set)
+    const classes= useStyle()
 
     return(
 
-        <FormGroup style={{marginTop:"8px"}}>
-            <div style={{ 
-                textAlign: "left" ,height:"42px"}}>
+        <FormGroup className={classes.tripGroup}>
+            <div className="formGroup">
                 <FormControlLabel control={<Checkbox onClick={e => setCheck.boxTrip(e)}/>} label="Limit Number Of trip " />
-                <FormControl style={{ width: "10%", marginTop:"-16px"} }>
-                <InputLabel variant="standard" >
+                <FormControl sx={{marginTop:"-16px"}} >
+                <InputLabel  variant="standard" >
                     
                 </InputLabel>
                 <NativeSelect
