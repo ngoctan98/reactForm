@@ -49,7 +49,7 @@ function LapTap() {
   };
 
     return(
-        <div>
+      <div>
 
         <Box sx={{ width: '100%' }}>
             <Box sx={{ borderBottom: 1, borderColor: 'divider' ,width: '100%' }}>
@@ -59,14 +59,13 @@ function LapTap() {
                 </Tabs>
             </Box>
             <TabPanel value={value} index={0} >
-                <MainInfor ></MainInfor>
+                <MainInfor />
             </TabPanel>
             <TabPanel value={value} index={1}>
-                <Configuration ></Configuration>
+                <Configuration />
             </TabPanel>
         </Box>
-
-        </div>
+      </div>
     )
 
     

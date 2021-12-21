@@ -87,25 +87,19 @@ function Form() {
             </div>
 
             <div className="container">
-                <LapTap></LapTap>
+                <LapTap/>
             </div>
 
             <div className="footer">
-
                 <Stack direction="row" spacing={2} className={classes.footer}>
                     <Button variant="outlined">CANCEL</Button>
                     <Button variant="contained" onClick={handleClick} >
                          UPDATE
                     </Button>
-                   
                 </Stack>
-
             </div>
         </div>
     </set.Provider>
-       
-        
     )
-    
 }
 export default Form;

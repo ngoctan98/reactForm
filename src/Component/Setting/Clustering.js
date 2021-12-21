@@ -15,8 +15,6 @@ function Clustering() {
     const setCheck=React.useContext(set)
     const classes= useStyle()
     
- 
-
     return(
 
         <div>
@@ -34,11 +32,11 @@ function Clustering() {
                 >
                     {CLUSTER.map((item,index) => 
                         <FormControlLabel key={index}
-                         disabled={!setCheck.disabledRadio}
-                        value={item}
-                        control={<Radio />} 
-                        label={item} 
-                        className="headingRadio" />
+                            disabled={!setCheck.disabledRadio}
+                            value={item}
+                            control={<Radio />} 
+                            label={item} 
+                            className="headingRadio" />
                     )}
                 </RadioGroup>
                  <TextField
@@ -50,9 +48,7 @@ function Clustering() {
                     variant="filled"
                     />
         </div>
-
     )
-    
 }
 
 

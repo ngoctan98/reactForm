@@ -15,7 +15,7 @@ function  Setting() {
                     <p  className="headingRadio">Clustering</p>
                 </div>
                 <div className="flex">
-                <Clustering></Clustering>
+                <Clustering/>
                 </div>
             </div>
 
@@ -25,7 +25,7 @@ function  Setting() {
                 </div>
 
                 <div>
-                    <Split></Split>
+                    <Split/>
                 </div>
             </div>
 
@@ -35,7 +35,7 @@ function  Setting() {
                 </div>
 
                 <div >
-                    <VehiclePriority></VehiclePriority>
+                    <VehiclePriority/>
                 </div>
             </div>
 
@@ -45,17 +45,13 @@ function  Setting() {
                 </div>
 
                 <div >
-                    <Trip></Trip>
+                    <Trip/>
                 </div>
             </div>
                 
         </div>
     </div>
-
-        
-        
     )
-    
 };
 
 
