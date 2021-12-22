@@ -29,3 +29,7 @@ export const styleForm2= {
                  marginLeft:"8px", 
                  marginRight:"8px"
 }
+
+export const styleTripForm={
+    marginTop: "-16px"
+}
