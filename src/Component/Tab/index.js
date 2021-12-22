@@ -4,9 +4,9 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import { textAlign } from '@mui/system';
-import MainInfor from './mainInfor';
-import Configuration from './configuration';
+import MainInfor from '../MainInformation';
+import Configuration from '../Congiguration';
+import { styleBox, styleTab } from './style';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -27,6 +27,7 @@ function TabPanel(props) {
     </div>
   );
 }
+
 
 TabPanel.propTypes = {
   children: PropTypes.node,
@@ -49,24 +50,23 @@ function LapTap() {
   };
 
     return(
-        <div>
+      <div>
 
-        <Box sx={{ width: '100%' }}>
-            <Box sx={{ borderBottom: 1, borderColor: 'divider' ,width: '100%' }}>
+        <Box >
+            <Box sx={styleBox}>
                 <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" >
-                    <Tab label="MAIN INFORMATION" {...a11yProps(0)} style={{maxWidth: '1000px', width:"50%"}}/>
-                    <Tab label="CONGIGURATION" {...a11yProps(1)} style={{maxWidth: '1000px', width:"50%"}}/>
+                    <Tab label="MAIN INFORMATION" {...a11yProps(0)} style={styleTab}/>
+                    <Tab label="CONGIGURATION" {...a11yProps(1)} style={styleTab}/>
                 </Tabs>
             </Box>
             <TabPanel value={value} index={0} >
-                <MainInfor ></MainInfor>
+                <MainInfor />
             </TabPanel>
             <TabPanel value={value} index={1}>
-                <Configuration ></Configuration>
+                <Configuration />
             </TabPanel>
         </Box>
-
-        </div>
+      </div>
     )
 
     

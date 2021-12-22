@@ -6,33 +6,41 @@ import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormLabel from '@mui/material/FormLabel';
 import TextField from '@mui/material/TextField'
-import { set } from './main';
+import { CLUSTER } from '../Constants';
+import { set } from '../Form';
+import { useStyle } from './style';
 
 
 function Clustering() {
     const setCheck=React.useContext(set)
-    const cluster = ['Auto', 'By Province', 'By Distric', 'By Town', 'By Drawing','Use Partner' ]
- 
-
+    const classes= useStyle()
+    
     return(
 
         <div>
              <FormGroup aria-label="gender">
-                <FormControlLabel control={<Checkbox onChange={e => setCheck.boxCluster(e)} />} label="Use Clustering" />
+                <FormControlLabel 
+                control={<Checkbox onChange={e => setCheck.boxCluster(e)} />} 
+                label="Use Clustering" />
             </FormGroup>
 
-            <FormLabel component="legend" style={{ textAlign: "left" }}>Cluster:</FormLabel>
+            <FormLabel component="legend"  className={classes.clusteringForm}>Cluster:</FormLabel>
                 <RadioGroup
                     aria-label="gender"
                     name="radio-buttons-group"
                     onChange={ e => setCheck.radioCluster(e)}
                 >
-                    {cluster.map((item,index) => 
-                        <FormControlLabel key={index} disabled={!setCheck.disabledRadio} value={item} control={<Radio />} label={item} className="headingRadio" />
+                    {CLUSTER.map((item,index) => 
+                        <FormControlLabel key={index}
+                            disabled={!setCheck.disabledRadio}
+                            value={item}
+                            control={<Radio />} 
+                            label={item} 
+                            className="headingRadio" />
                     )}
                 </RadioGroup>
                  <TextField
-                 style={{ width: "100%" }}
+                    className={classes.clusterText}
                     required
                     id="filled-required"
                     label="label"
@@ -40,9 +48,7 @@ function Clustering() {
                     variant="filled"
                     />
         </div>
-
     )
-    
 }
 
 

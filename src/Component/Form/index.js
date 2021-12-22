@@ -2,16 +2,18 @@ import * as React from 'react';
 import { createContext, useState } from 'react';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
-import LapTap from './tab';
+import LapTap from '../Tab';
+import { useStyle } from './style';
 
 export const set=createContext()
 
-function Main() {
+function Form() {
 
     const [checkRadioCluster, setCheckRadioCluster] = useState(false)
     const [checkBoxCluster, setCheckBoxCluster] = useState(false)
     const [checkBoxSplit, setCheckBoxSplit] = useState(false)
     const [checkBoxTrip, setCheckBoxTrip] = useState(false)
+    const classes = useStyle()
 
     function  setCheckedRadio(e) {
         setCheckRadioCluster(e.target.checked)
@@ -85,25 +87,19 @@ function Main() {
             </div>
 
             <div className="container">
-                <LapTap></LapTap>
+                <LapTap/>
             </div>
 
             <div className="footer">
-
-                <Stack direction="row" spacing={2}style={{ float:"right" , paddingRight:"24px", margin:"auto 0 auto auto"}}>
+                <Stack direction="row" spacing={2} className={classes.footer}>
                     <Button variant="outlined">CANCEL</Button>
                     <Button variant="contained" onClick={handleClick} >
                          UPDATE
                     </Button>
-                   
                 </Stack>
-
             </div>
         </div>
     </set.Provider>
-       
-        
     )
-    
 }
-export default Main;
+export default Form;
