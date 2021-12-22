@@ -18,3 +18,14 @@ export const useStyle = makeStyles({
         width:'100%'
     }
 })
+export const styleForm1={
+            width: "20%" ,  
+            marginLeft:"8px",
+            marginRight:"8px"
+}
+
+export const styleForm2= {
+                 width: "17%" , 
+                 marginLeft:"8px", 
+                 marginRight:"8px"
+}

@@ -6,6 +6,8 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Setting from '../Setting';
 import { useStyle } from './style';
+import { TABS } from '../Constants';
+import { styleTabs, styleTab } from './style';
 
 
 function TabPanel(props) {
@@ -60,19 +62,11 @@ function BranchConfig() {
             value={value}
             onChange={handleChange}
             aria-label="Vertical tabs example"
-            sx={{ borderRight: 1, borderColor: 'divider',minWidth:"200px"}} 
+            sx={styleTabs} 
           >
-            <Tab label="Branch Config" {...a11yProps(0)}  className={classes.tab}  />
-            <Tab label="Systems" {...a11yProps(1)} className={classes.tab} />
-            <Tab label="Display" {...a11yProps(2)} className={classes.tab} />
-            <Tab label="Mobile" {...a11yProps(3)} className={classes.tab} />
-            <Tab label="Holidays" {...a11yProps(4)} className={classes.tab} />
-            <Tab label="Item Order Creation" {...a11yProps(5)} className={classes.tab} />
-            <Tab label="Discount" {...a11yProps(6)} className={classes.tab} />
-            <Tab label="Un(loading) Time" {...a11yProps(7)} className={classes.tab} />
-            <Tab label="3D Loading" {...a11yProps(8)} className={classes.tab} />
-            <Tab label="Algorithms" {...a11yProps(9)}className={classes.tab} />
-            <Tab label="Reasons Unfulfilled" {...a11yProps(10)}className={classes.tab} />
+            {TABS.map((item,index) => 
+              <Tab key={index} label={item} {...a11yProps(index)} sx={styleTab}  />
+            )}
           </Tabs>
         <div className="tab" >
             <TabPanel value={value} index={0} className={classes.tabPanel}>

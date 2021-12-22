@@ -18,3 +18,13 @@ export const useStyle = makeStyles({
         margin:"-24px -14px 0 -24px"
     }
 })
+export const styleTabs={
+        borderRight: 1, 
+        borderColor: 'divider',
+        minWidth:"200px"
+        }
+
+export const styleTab={
+        textTransform:'none',
+        alignItems:'flex-start'
+}

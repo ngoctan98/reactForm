@@ -11,40 +11,29 @@ function  Setting() {
         <div className="setting" >
 
             <div className="displayFlex">
-                <div >
-                    <p  className="headingRadio">Clustering</p>
-                </div>
+                <p  className="headingRadio">Clustering</p>
                 <div className="flex">
                 <Clustering/>
                 </div>
             </div>
 
             <div className="displayFlex">
-                <div >
-                    <p  className="headingRadio">Split Delivery</p>
-                </div>
-
+                <p  className="headingRadio">Split Delivery</p>
                 <div>
                     <Split/>
                 </div>
             </div>
 
             <div className="displayFlex">
-                <div className="marginTop" >
-                    <p  className="headingRadio">Vehicle Priority</p>
-                </div>
-
-                <div >
+                <p  className="headingRadio ">Vehicle Priority</p>
+                <div className="marginTop">
                     <VehiclePriority/>
                 </div>
             </div>
 
             <div className="displayFlex">
-                <div className="marginTop" >
-                    <p  className="headingRadio">Trip Limit</p>
-                </div>
-
-                <div >
+                <p  className="headingRadio">Trip Limit</p>
+                <div className="marginTop">
                     <Trip/>
                 </div>
             </div>

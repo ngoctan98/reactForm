@@ -3,6 +3,7 @@ import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
 import NativeSelect from '@mui/material/NativeSelect';
 import { ACSENDING, WEIGHT } from '../Constants';
+import { styleForm1, styleForm2 } from './style';
 
 
 export default function VehiclePriority() {
@@ -11,7 +12,7 @@ export default function VehiclePriority() {
 
         <div className="vehicleHeading">
             <p className="vehicleP">Prioritize vehicles</p>
-            <FormControl style={{ width: "20%" , fontSize:"14px", marginLeft:"8px", marginRight:"8px"} }>
+            <FormControl style={styleForm1}>
                 <InputLabel variant="standard">
                 </InputLabel>
                 <NativeSelect
@@ -30,7 +31,7 @@ export default function VehiclePriority() {
                 </NativeSelect>
             </FormControl>
             <p className="vehicleP">by</p>
-            <FormControl style={{ width: "17%" , marginLeft:"8px", marginRight:"8px"} }>
+            <FormControl style={styleForm2}>
                 <InputLabel variant="standard"  > 
                 </InputLabel>
                 <NativeSelect

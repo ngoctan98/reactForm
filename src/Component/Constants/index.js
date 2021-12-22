@@ -26,3 +26,5 @@ export const ACSENDING = [
             value: 'Twenty'
         }
     ]
+
+export const TABS=['Branch Config', 'Systems', 'Display', 'Mobile', 'Holidays', 'Item Order Creation', 'Discount', 'Un(loading) Time', '3D Loading', 'Algorithms', 'Reasons Unfulfilled' ]
